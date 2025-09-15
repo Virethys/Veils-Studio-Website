@@ -1,7 +1,8 @@
 import { ArrowDown, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import veilsLogo from '@/assets/veils-logo.png';
 import heroBg from '@/assets/hero-bg.jpg';
+import veilsLogo from "../assets/veils-logo.png";
+
 
 const Hero = () => {
   const scrollToAbout = () => {
