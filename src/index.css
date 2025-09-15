@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Veils Studio Design System - Dark Navy & White with Lily Motifs
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 230 35% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 35% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 35% 7%;
+
+    /* Veils Studio Navy Blue Theme */
+    --primary: 230 35% 15%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 230 45% 25%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 230 35% 15%;
+
+    --muted: 230 10% 95%;
+    --muted-foreground: 230 15% 45%;
+
+    --accent: 230 15% 90%;
+    --accent-foreground: 230 35% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 230 10% 85%;
+    --input: 230 10% 90%;
+    --ring: 230 35% 15%;
+
+    /* Custom Veils Studio Colors */
+    --veils-navy: 230 35% 15%;
+    --veils-navy-light: 230 25% 25%;
+    --veils-navy-dark: 230 45% 8%;
+    --veils-white: 0 0% 98%;
+    --veils-lily: 0 0% 95%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--veils-navy-dark)), hsl(var(--veils-navy)));
+    --gradient-section: linear-gradient(180deg, hsl(var(--background)), hsl(var(--veils-lily)));
+    --gradient-mystical: linear-gradient(45deg, hsl(var(--veils-navy)) 0%, hsl(var(--primary-glow)) 100%);
+
+    /* Shadows */
+    --shadow-mystical: 0 10px 40px -10px hsl(var(--veils-navy) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
+    --shadow-lily: 0 5px 20px -5px hsl(var(--veils-navy) / 0.2);
+
+    /* Animations */
+    --transition-mystical: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 230 45% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 230 35% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 230 35% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 230 35% 15%;
+
+    --secondary: 230 25% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 230 25% 18%;
+    --muted-foreground: 230 10% 65%;
+
+    --accent: 230 25% 18%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 230 25% 18%;
+    --input: 230 25% 18%;
+    --ring: 0 0% 95%;
+
+    /* Dark mode Veils colors */
+    --veils-navy: 0 0% 95%;
+    --veils-navy-light: 230 15% 85%;
+    --veils-navy-dark: 230 45% 5%;
+    --veils-white: 230 45% 8%;
+    --veils-lily: 230 35% 10%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--veils-navy-dark)), hsl(var(--background)));
+    --gradient-section: linear-gradient(180deg, hsl(var(--background)), hsl(var(--veils-lily)));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Veils Studio Component Classes */
+  .veils-hero-bg {
+    background: var(--gradient-hero);
+  }
+
+  .veils-section-bg {
+    background: var(--gradient-section);
+  }
+
+  .veils-mystical-glow {
+    box-shadow: var(--shadow-mystical);
+  }
+
+  .veils-lily-shadow {
+    box-shadow: var(--shadow-lily);
+  }
+
+  .veils-transition {
+    transition: var(--transition-mystical);
+  }
+
+  .veils-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* Mystical animations */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite alternate;
+  }
+
+  .lily-drift {
+    animation: lily-drift 8s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .text-veils-navy {
+    color: hsl(var(--veils-navy));
+  }
+
+  .bg-veils-navy {
+    background-color: hsl(var(--veils-navy));
+  }
+
+  .text-veils-white {
+    color: hsl(var(--veils-white));
+  }
+
+  .bg-veils-white {
+    background-color: hsl(var(--veils-white));
+  }
+
+  .gradient-text {
+    background: var(--gradient-mystical);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Keyframe animations for mystical effects */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 20px hsl(var(--primary-glow) / 0.4);
+  }
+  100% {
+    box-shadow: 0 0 40px hsl(var(--primary-glow) / 0.8);
+  }
+}
+
+@keyframes lily-drift {
+  0%, 100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateX(10px) rotate(1deg);
+  }
+  75% {
+    transform: translateX(-10px) rotate(-1deg);
+  }
+}
