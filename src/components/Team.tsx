@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter } from 'lucide-react';
+import urielImage from '@/assets/uriel.jfif';
 
 const Team = () => {
   const teamMembers = [
@@ -6,7 +7,7 @@ const Team = () => {
       name: "Uriel",
       role: "Creative Director & Co-Founder",
       bio: "Former lead designer at major AAA studios with 12+ years crafting immersive worlds.",
-      image: "https://cdn.discordapp.com/attachments/1076845922740355156/1416735223370223707/c1832d9c-f9f6-4e3e-901b-79cade2bdd0d.png?ex=68c7ecfe&is=68c69b7e&hm=7c158da275fe6bb5f025364dd21c7fb4b2e05bcd879bff17de407bf37b8937a3&",
+      image: urielImage,
       social: {
         linkedin: "#",
         twitter: "#",
